@@ -54,7 +54,7 @@ final_df.drop(['POS_y'], axis=1, inplace=True)
 final_df = final_df.rename({'NAME_x': 'NAME', 'POS_x': 'POS', 'TEAM_x': 'TEAM', 'GAMES':'2020 GP', 'TOTAL POINTS':'2020 TTL PTS'}, axis=1)
 
 # add indexing
-final_df.set_index(['League Type', 'POS' ], inplace=True)
+final_df.set_index(['League Type', 'POS', 'ID'], inplace=True)
 final_df.sort_index(inplace=True)
 
 final_df.to_excel(r".\testExport.xlsx", index=True, header=True)  # export
