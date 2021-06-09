@@ -12,7 +12,7 @@ adp_ppr_2021 = pd.read_csv("./Fantasy Football Datasets/2021 ADP PPR.csv")
 # 2020 PPR
 ppr_2020.drop(ppr_2020.columns[[14,15,16,17]], axis=1, inplace=True)  # get rid of defense columns
 ppr_2020 = ppr_2020[ppr_2020['POS'].isin(offense_list)]  # filter to only have desired positions
-ppr_2020 = ppr_2020.rename({'RK': '2020 RK',}, axis=1)  # rename column
+ppr_2020 = ppr_2020.rename({'RK': '2020 RK'}, axis=1)  # rename column
 ppr_2020['Passing Pts'] = ppr_2020['PASSING YDS']/25 + ppr_2020['PASSING TD']*4 - ppr_2020['PASSING TD']*2
 ppr_2020['Rushing Pts'] = ppr_2020['RUSHING YDS']/10 + ppr_2020['RUSHING TD']*6
 ppr_2020['Receiving Pts'] = ppr_2020['RECEIVING YARDS']/10 + ppr_2020['RECEIVING TDS']*6 + ppr_2020['RECEIVING RECEPTIONS']
@@ -43,7 +43,7 @@ ppr_merged = pd.merge(adp_ppr_2021,std_2020, on='ID',how="outer" )
 ppr_merged['League Type'] = 'PPR'  # add league type column
 final_df = pd.concat([ppr_merged, std_merged])
 
-# combinie columns
+# combine columns
 # fill NA in one column with values from other
 final_df.NAME_x.fillna(final_df.NAME_y, inplace=True)
 final_df.drop(['NAME_y'], axis=1, inplace=True)
