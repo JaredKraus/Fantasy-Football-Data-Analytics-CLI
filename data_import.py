@@ -42,7 +42,7 @@ ppr_merged['League Type'] = 'PPR'  # add league type column
 final_df = pd.concat([ppr_merged, std_merged])
 
 # combine columns
-# fill NA in one column with values from other
+# fill NA in one column with values from othero
 final_df.NAME_x.fillna(final_df.NAME_y, inplace=True)
 final_df.drop(['NAME_y'], axis=1, inplace=True)
 final_df.TEAM_x.fillna(final_df.TEAM_y, inplace=True)
