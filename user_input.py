@@ -51,14 +51,16 @@ def obtain_user_input():
         "1": "ADP",
         "2": "TTL PTS"
     }
-    rank_sys = input("Enter how you would like to rank players (1 for ADP, 2 for 2020 Total Points): ")
-    try:
-        while True:
+
+    while True:
+        rank_sys = input("Enter how you would like to rank players (1 for ADP, 2 for 2020 Total Points): ")
+        try:
             if rank_sys in rank_dict:
                 rank_sys = rank_dict[rank_sys]
+                break
             else:
                 raise ValueError
-    except:
-        print("Invalid Entry: please enter either 1 for ADP, or 2 for 2020 Total Points")
+        except:
+            print("Invalid Entry: please enter either 1 for ADP, or 2 for 2020 Total Points")
 
     return league_type, pos, rank_sys, n_rows
