@@ -52,10 +52,10 @@ def ind_player_stats():
     print("         Players with NaN values for ADP stats were outside of top 300 players based on 2021 ADP projections.\n ")
 
 
-    print(f"------------------------------------ Individual Statistics for top {n_rows} players ({league_type})------------------------------------")
+    print(f"------------------------------------ Individual Statistics for top {n_rows} {pos}s ({league_type})------------------------------------")
     print(position_df.head(n_rows).to_string(index=False))
 
-    print(f"\n------------------------------------- Overall Statistics for top {n_rows} players ({league_type})-------------------------------------")
+    print(f"\n------------------------------------- Overall Statistics for top {n_rows} {pos}s ({league_type})-------------------------------------")
     print(position_df.head(n_rows).describe().iloc[1:, :])
 
 
