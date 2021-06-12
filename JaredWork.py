@@ -65,6 +65,7 @@ def RunGeneralStats(df):
     PlayerPointsPlot(std_df, idx, "STD", "2021 PROJ PTS")
     PlayerPointsPlot(ppr_df, idx, "PPR", "2020 TTL PTS")
     PlayerPointsPlot(std_df, idx, "STD", "2020 TTL PTS")
+    print("yeet", "yah")
     # GeneralStats(df)
 
 
