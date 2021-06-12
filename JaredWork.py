@@ -62,10 +62,11 @@ def RunGeneralStats(df):
     ppr_df = df.loc[idx["PPR", :, :], idx[:]]
     std_df = df.loc[idx["STD", :, :], idx[:]]
     PlayerPointsPlot(ppr_df, idx, "PPR", "2021 PROJ PTS")
-    PlayerPointsPlot(std_df, idx, "STD", "2021 PROJ PTS")
+    PlayerPointsPlot(std_df, idx, "STD", "2021 PROJ PTS")s
     PlayerPointsPlot(ppr_df, idx, "PPR", "2020 TTL PTS")
     PlayerPointsPlot(std_df, idx, "STD", "2020 TTL PTS")
     print("yeet", "yah")
+    print("got pats")
     # GeneralStats(df)
 
 
