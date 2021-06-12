@@ -43,7 +43,7 @@ std_merged = pd.merge(adp_std_2021,std_2020, on='ID',how="outer" )  # Outer join
 std_merged['League Type'] = 'STD'  # add league type column
 
 # merge ppr league 2020 with ppr league adp projections
-ppr_merged = pd.merge(adp_ppr_2021,std_2020, on='ID',how="outer" )  # Outer join based on player ID
+ppr_merged = pd.merge(adp_ppr_2021,ppr_2020, on='ID',how="outer" )  # Outer join based on player ID
 ppr_merged['League Type'] = 'PPR'  # add league type column
 final_df = pd.concat([ppr_merged, std_merged])  # add tables on top of one another.
 
