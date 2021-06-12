@@ -5,7 +5,7 @@ from data_import import final_df
 entire_df = final_df.copy()
 
 
-def PlayerPointsPlot(df, idx, leauge, year, col):
+def player_points_plot(df, idx, leauge, year, col):
     """
     Plots the top players in each position by the given col
 
@@ -49,7 +49,7 @@ def PlayerPointsPlot(df, idx, leauge, year, col):
     plt.show()  # show plot
 
 
-def GeneralStats(df):
+def general_stats(df):
     """
     Prints out 2020 averages, 2021 projection averages,
     earlist draft by postion, and team fantasy points
@@ -82,7 +82,7 @@ def GeneralStats(df):
         "PROJ PTS", index='TEAM', columns='League Type', aggfunc=np.sum).round(1).sort_values("PPR", ascending=False))
 
 
-def RunGeneralStats(df):
+def run_general_stats():
     """
     Run PlayerPointsPlot() function for each year and league (4 times)
     Run GeneralStats()
@@ -92,17 +92,17 @@ def RunGeneralStats(df):
     """
 
     idx = pd.IndexSlice  # for indexslicing
-    ppr_df = df.loc[idx["PPR", :, :], idx[:]]
-    std_df = df.loc[idx["STD", :, :], idx[:]]
-    PlayerPointsPlot(ppr_df, idx, "PPR", "2021",
-                     "PROJ PTS")  # 2021 proj PPR plot
-    PlayerPointsPlot(std_df, idx, "STD", "2021",
-                     "PROJ PTS")  # 2021 proj STD plot
-    PlayerPointsPlot(ppr_df, idx, "PPR", "2020",
-                     "TTL PTS")  # 2020 points PPR plot
-    PlayerPointsPlot(std_df, idx, "STD", "2020",
-                     "TTL PTS")  # 2020 points STD plot
-    GeneralStats(df)
+    ppr_df = entire_df.loc[idx["PPR", :, :], idx[:]]
+    std_df = entire_df.loc[idx["STD", :, :], idx[:]]
+    player_points_plot(ppr_df, idx, "PPR", "2021",
+                       "PROJ PTS")  # 2021 proj PPR plot
+    player_points_plot(std_df, idx, "STD", "2021",
+                       "PROJ PTS")  # 2021 proj STD plot
+    player_points_plot(ppr_df, idx, "PPR", "2020",
+                       "TTL PTS")  # 2020 points PPR plot
+    player_points_plot(std_df, idx, "STD", "2020",
+                       "TTL PTS")  # 2020 points STD plot
+    general_stats(entire_df)
 
 
-RunGeneralStats(entire_df)
+run_general_stats()
