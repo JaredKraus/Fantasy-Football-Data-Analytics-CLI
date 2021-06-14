@@ -1,3 +1,4 @@
+# authors: Graydon Hall and Jared Kraus Group 2
 from data_import import final_df
 import pandas as pd
 import matplotlib as mpl

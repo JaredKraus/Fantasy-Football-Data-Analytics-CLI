@@ -1,3 +1,4 @@
+# authors: Graydon Hall and Jared Kraus Group 2
 import pandas as pd
 
 offense_list = ['WR', 'RB', 'QB', 'TE'] # List containing desired posiitons

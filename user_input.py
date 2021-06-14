@@ -1,3 +1,4 @@
+# authors: Graydon Hall and Jared Kraus Group 2
 from data_import import final_df
 import pandas as pd
 import numpy as np
@@ -53,13 +54,13 @@ def obtain_user_input():
         try:
             n_rows = input(f"Enter a count of players to study as an integer (max: {num_pos} for {pos}): ")
             n_rows = int(n_rows)  # will raise ValueError if not an integer.
-            if n_rows <= num_pos:  # ensure < than count of position
+            if (n_rows <= num_pos and n_rows >0):  # ensure < than count of position
                 break  # brak since valid entry
             else:  # invalid entry
                 raise ValueError
         except ValueError:
             # presesnt error message and redo loop
-            print(f"Invalid entry: please enter an integer less than {num_pos}")
+            print(f"Invalid entry: please enter an integer less than {num_pos} and > 0.")
 
 
     # possible user entry values. 

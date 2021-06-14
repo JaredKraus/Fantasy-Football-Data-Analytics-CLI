@@ -1,4 +1,5 @@
 # main routine to call program
+# authors: Graydon Hall and Jared Kraus Group 2
 
 # obtain user input for study, then present statistical data based on league type, position, chosen
 # ranking system, and count of players to study

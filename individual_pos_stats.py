@@ -1,3 +1,4 @@
+# authors: Graydon Hall and Jared Kraus Group 2
 import math
 import os
 

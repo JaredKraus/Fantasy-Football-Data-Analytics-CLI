@@ -1,3 +1,4 @@
+# authors: Graydon Hall and Jared Kraus Group 2
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -77,9 +78,9 @@ def general_stats(df):
         "ADP", index='POS', columns='League Type', aggfunc=np.min).round(1))
 
     # sum of 2020 fantasy points for each team
-    print("\nTeams with the most Fantasy Points in 2020\n")
+    print("\nTop 10 Teams with the most Fantasy Points in 2020\n")
     print(drafted_df.pivot_table(
-        "PROJ PTS", index='TEAM', columns='League Type', aggfunc=np.sum).round(1).sort_values("PPR", ascending=False))
+        "PROJ PTS", index='TEAM', columns='League Type', aggfunc=np.sum).round(1).sort_values("PPR", ascending=False).head(10))
 
 
 def run_general_stats():
@@ -103,6 +104,3 @@ def run_general_stats():
     player_points_plot(std_df, idx, "STD", "2020",
                        "TTL PTS")  # 2020 points STD plot
     general_stats(entire_df)
-
-
-run_general_stats()
