@@ -31,7 +31,7 @@ def player_compare(pos):
     position_df[f'{pos} Rank'] = position_df['TTL PTS'].rank(ascending=False)  # ranking column based on ttl pts
     position_df.sort_values(by='TTL PTS', inplace=True, ascending=False)  # sort values by ranking
     position_df.head(20).plot.bar(x=f'{pos} Rank', y=['Rushing Pts', optional_col, 'Other Pts'], stacked=True)  # plot data
-    plt.title(f"Fantasy {pos} point breakdown")
+    plt.title(f"Fantasy {pos} point breakdown (PPR, 2020 Totals)")
     plt.ylabel("Fantasy Points")
     plt.show()
 
