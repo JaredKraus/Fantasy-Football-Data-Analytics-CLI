@@ -78,7 +78,7 @@ def general_stats(df):
         "ADP", index='POS', columns='League Type', aggfunc=np.min).round(1))
 
     # sum of 2020 fantasy points for each team
-    print("\nTop 10 Teams with the most Fantasy Points in 2020 (PPR)\n")
+    print("\nTop 10 Teams with the most Fantasy Points in 2020 (Sorted by PPR scoring)\n")
     print(drafted_df.pivot_table(
         "PROJ PTS", index='TEAM', columns='League Type', aggfunc=np.sum).round(1).sort_values("PPR", ascending=False).head(10))
 
