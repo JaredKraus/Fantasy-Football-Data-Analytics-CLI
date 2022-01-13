@@ -1,6 +1,6 @@
 # Fantasy Football Data Analytics
 
-The following presentation slides outline our methods, findings and the CLI. <br>
+The following presentation slides outline our methods, findings and the CLI. <br><br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-0.png)<br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-1.png)<br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-2.png)<br>
