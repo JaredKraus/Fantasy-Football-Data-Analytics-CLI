@@ -1,10 +1,6 @@
-# ENSF 592 Spring 2021 - Final Project: Fantasy Football Data Analytics
-Contributors: 
-* [Graydon Hall](https://github.com/GraydonHall42)
-* [Jared Kraus](https://github.com/JaredKraus)
+# Fantasy Football Data Analytics
 
-The purpose of this project was to use Python to analyze fantasy football data. The following
-presentation slides outline our methods and findings. <br>
+The following presentation slides outline our methods, findings and the CLI. <br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-0.png)<br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-1.png)<br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-2.png)<br>
@@ -19,4 +15,6 @@ presentation slides outline our methods and findings. <br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-11.png)<br>
 ![](presentationScreenshots/1ff60a6ad0b43f2281611a7a5ba81f8c-12.png)<br>
 
-
+Contributors: 
+* [Graydon Hall](https://github.com/GraydonHall42)
+* [Jared Kraus](https://github.com/JaredKraus)
